@@ -1,0 +1,4 @@
+clc
+clear all
+lbr = importrobot('iiwa14.urdf');
+lbr.DataFormat
