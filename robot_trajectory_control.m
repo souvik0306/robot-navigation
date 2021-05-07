@@ -94,6 +94,14 @@ hold on
 exampleHelperPlotCupAndTable(cupHeight, cupRadius, cupPosition);
 p = plot3(gripperPosition(1,1), gripperPosition(1,2), gripperPosition(1,3));
 
-
+hold on
+for k = 1:size(qInterp,1)
+ show(lbr, qInterp(k,:), 'PreservePlot', false);
+ p.XData(k) = gripperPosition(k,1);
+ p.YData(k) = gripperPosition(k,2);
+ p.ZData(k) = gripperPosition(k,3);
+ waitfor(r);
+end
+hold off
 
 
